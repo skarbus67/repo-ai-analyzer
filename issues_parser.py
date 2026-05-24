@@ -12,7 +12,8 @@ def parse_github_issues(raw_issues: List[Dict[str, Any]]) -> List[Dict[str, Any]
 
             
         labels = [label.get("name") for label in issue.get("labels")]
-        
+
+        assignees = [assignee.get("login") for assignee in (issue.get("assignees") or [])]
 
         parsed_issue = {
             "id": issue.get("number"),
@@ -21,7 +22,8 @@ def parse_github_issues(raw_issues: List[Dict[str, Any]]) -> List[Dict[str, Any]
             "state": issue.get("state"),
             "created_at": issue.get("created_at"),
             "author": issue.get("user").get("login"),
-            "labels": labels
+            "labels": labels,
+            "assignees": assignees
         }
         
         parsed_issues.append(parsed_issue)
