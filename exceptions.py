@@ -7,3 +7,9 @@ class GithubNotFoundError(GithubClientError):
 
 class GithubConnectionError(GithubClientError):
     pass
+
+class ClaudeClientError(Exception):
+    pass
+
+class ClaudeConnectionError(ClaudeClientError):
+    pass
