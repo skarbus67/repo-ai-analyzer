@@ -1,8 +1,6 @@
-import os
 from exceptions import ClaudeClientError, ClaudeConnectionError
 from anthropic import Anthropic, APIError, APIConnectionError
 from typing import Dict, Any
-from dotenv import load_dotenv
 from config import CLAUDE_MODEL, CLAUDE_MAX_TOKENS, ANTHROPIC_API_KEY
 
 def send_claude_request(
