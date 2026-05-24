@@ -10,9 +10,6 @@ def send_claude_request(
     system_prompt: str = None,
 ) -> str:
     
-    if not ANTHROPIC_API_KEY:
-        raise ClaudeClientError("missing ANTHROPIC_API_KEY in environment variables.")
-
     try:
         client = Anthropic(api_key=ANTHROPIC_API_KEY)
         
