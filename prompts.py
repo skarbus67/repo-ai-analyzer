@@ -26,9 +26,6 @@ Keys available per issue: 'id', 'title', 'body', 'state', 'created_at', 'author'
 """
 
 
-# ---------------------------------------------------------------------------
-# OPEN ISSUES PROMPT — Forward-looking health, roadmap, and risk report
-# ---------------------------------------------------------------------------
 OPEN_ISSUES_SYSTEM_PROMPT = f"""
 {_SHARED_PREAMBLE}
 
